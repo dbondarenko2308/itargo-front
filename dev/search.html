@@ -1,0 +1,31 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+@@include('components/elements/breadcrumbs/template.html',{ list: ['<a href="index.html">Главная</a>' ], 'page': 'Результат поиска по запросу «Крафт-бумага»', 'title': true, })
+
+<div class="search">
+  <div class="container">
+    <div class="search__inner">
+
+      <a href="#" class="card">
+        <div class="card__img">
+          <img src="images/c1.png" alt="">
+        </div>
+
+        <div class="card__info">
+
+          <div class="card__arrow">
+           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M7 17L17 7" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M7 7H17V17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+          </div>
+
+          <div class="card__name">
+            Заклейщик гофрокороба Robotape 50 МЕ
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+@@include('components/footer/template.html',{})

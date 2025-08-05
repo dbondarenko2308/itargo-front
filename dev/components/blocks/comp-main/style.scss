@@ -1,0 +1,126 @@
+.comp-main {
+  min-height: 950px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @media only screen and (max-width: 991px) {
+    min-height: inherit;
+  }
+
+  &__bg {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 800px;
+    right: 0;
+    top: 75px;
+
+    @media only screen and (max-width: 991px) {
+      width: 600px;
+      height: 450px;
+
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: 991px) {
+      padding: 80px 0;
+    }
+  }
+
+  &__title {
+    color: #1c1e24;
+    margin-bottom: 40px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__text {
+    max-width: 785px;
+    margin-bottom: 40px;
+
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__btn {
+    max-width: 279px;
+  }
+
+  &__items {
+    margin-top: 60px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    padding: 20px;
+
+    &:first-child {
+      background: #566b97;
+      border-radius: 16px 0 0 16px;
+
+      @media only screen and (max-width: 991px) {
+        border-radius: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      background: #435882;
+    }
+
+    &:last-child {
+      background: #324773;
+      border-radius: 0 16px 16px 0;
+
+       @media only screen and (max-width: 991px) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__number {
+    color: #fff;
+    font-weight: 600;
+    font-size: 64px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 52px;
+    }
+  }
+
+  &__desc {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    color: rgba(255, 255, 255, 0.8);
+
+    @media only screen and (max-width: 991px) {
+      font-size: 20px;
+    }
+  }
+}

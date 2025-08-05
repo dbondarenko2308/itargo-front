@@ -1,0 +1,16 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+<div class="stat-bg">
+  
+  <div class="container">
+    @@include('components/elements/breadcrumbs/template.html',{ list: ['<a href="index.html">Главная</a>', '<a href="index.html">Проекты</a>'], 'page': 'Поставка и интеграция оборудования для молочного завода в Тольятти', 'title': true, })
+    <div class="stat__text">
+      Itagro Group специализируется на комплексных поставках и интеграции современного оборудования для пищевой промышленности. Мы реализовали проект по оснащению молочного завода в Тольятти, обеспечив предприятие высокотехнологичными линиями для производства молочной продукции.
+
+    </div>
+  </div>
+</div>
+
+@@include('components/blocks/detal-stat/template.html',{})
+@@include('components/blocks/feedback/template.html',{})
+
+@@include('components/footer/template.html',{})

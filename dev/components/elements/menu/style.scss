@@ -1,0 +1,255 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.menu {
+  flex: 1 1 auto;
+  display: flex;
+  font-weight: var(--wight_bold);
+  line-height: 1.2;
+  width: 100%;
+
+  @media only screen and (max-width: 991px) {
+    flex: none;
+  }
+  &__wrapper,
+  &__list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+
+    @media only screen and (max-width: 991px) {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+  &__wrapper {
+    align-items: center;
+  }
+  &__list {
+    gap: 20px;
+
+   
+
+
+    & > li {
+    
+
+     
+
+      @media only screen and (max-width: 991px) {
+        padding: 0;
+        font-size: 18px;
+        width: 100%;
+      }
+      @media (any-hover: hover) {
+        &:hover > a {
+          &::after {
+            transform: rotate(180deg) translateY(50%);
+          }
+        }
+        &:hover > ul {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+  &__item {
+    cursor: pointer;
+
+    > a {
+      font-size: 20px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+      }
+    }
+  }
+  &__sub-list {
+    box-shadow: 0 32px 32px 0 rgba(68, 83, 113, 0.05),
+      0 0 32px 0 rgba(68, 83, 113, 0.1);
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 8px;
+    min-width: 200px;
+   opacity: 0;
+   visibility: hidden;
+
+    li {
+      padding: 10px 20px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 4px;
+        height: 100%;
+        background: $Red-600;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &:hover {
+        background: $Grey-200;
+
+        &::before {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        a {
+          color: $Link;
+        }
+      }
+      a {
+        font-size: 16px;
+      }
+    }
+
+    @media only screen and (max-width: 991px) {
+      position: relative;
+
+      opacity: 1;
+      top: 0;
+      margin-top: 3px;
+      border: 0;
+
+      padding: 15px 0;
+      display: none;
+
+      &.active {
+        left: 0;
+        visibility: visible;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  &:hover {
+    .menu__sub-list {
+      opacity: 1;
+      display: block;
+      visibility: visible;
+    }
+  }
+
+ 
+
+  &.active {
+    & > a {
+      &::after {
+        transform: rotate(180deg) translateY(50%);
+      }
+    }
+  }
+  & > a {
+    position: relative;
+    padding-right: 20px;
+    font-size: 20px;
+    &::after {
+      content: '';
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      right: 0;
+      top: 69%;
+      transform: translateY(-50%);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('../../images/icons/arrow.svg');
+      transition: 300ms;
+
+
+      @media only screen and (max-width: 991px) {
+          background-image: url('../../images/icons/arrow-mobile.svg');
+          width: 24px;
+          height: 24px;
+          right: 0;
+      }
+    }
+  }
+
+
+
+ 
+}
+
+
+.menu__mobile {
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+
+    &.active {
+      display: block;
+      position: fixed;
+      background: #fff;
+      top: 156px;
+      z-index: 101;
+      width: 100%;
+      left: 0;
+      height: calc(100vh - 330px);
+      padding: 20px;
+
+      .menu__sub-list {
+        display: block;
+        opacity: 1;
+        box-shadow: none;
+        padding: 0;
+        left: 0;
+
+        li {
+          padding: 0;
+          margin-bottom: 20px;
+
+          a {
+            font-weight: 400;
+
+          }
+        }
+      }
+    }
+  }
+
+  &--back {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+      color: $Black-600;
+      gap: 8px;
+    }
+  }
+
+  &--name {
+    display: none;
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+      font-size: 18px;
+      color: $Black-900;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+}

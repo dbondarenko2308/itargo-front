@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/favicon.webp" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon.webp"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon.webp"
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="libraries/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="libraries/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="libraries/slick/slick.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="libraries/animate/animate.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all-style.css" />
+    <title>Главная</title>
+  </head>
+
+  <body>
+    <!-- <div class="loader">
+      <div class="loader__img">
+        <img src="images/logo-foot.svg" alt="" />
+      </div>
+    </div> -->
+
+    <div class="wrapper" >
+      <header class="header">
+        <div class="container">
+          <div class="header__inner">
+            <div class="header__top">
+              <div class="header__left">
+                <a href="#" class="header__logo">
+                  <img src="images/logo.svg" alt="" />
+                </a>
+                <div class="header__logo--text">
+                  Комплексные решения для предприятий пищевой промышленности
+                </div>
+              </div>
+
+              <div class="header__info">
+                <a href="#" class="header__info--item">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"
+                      fill="#D62E2E"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.18085 5.42654C1.49757 4.97409 2.1211 4.86406 2.57355 5.18077L12.0001 11.7793L21.4266 5.18077C21.8791 4.86406 22.5026 4.97409 22.8193 5.42654C23.136 5.87899 23.026 6.50252 22.5735 6.81923L12.5735 13.8192C12.2292 14.0603 11.7709 14.0603 11.4266 13.8192L1.42662 6.81923C0.974174 6.50252 0.864139 5.87899 1.18085 5.42654Z"
+                      fill="#D62E2E"
+                    />
+                  </svg>
+                  <span>info@itagrogroup.ru</span>
+                </a>
+                <a href="#" class="header__info--item">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.58281 2.29358C7.90697 2.252 8.23581 2.3181 8.51873 2.48171C8.80038 2.64459 9.02097 2.89514 9.14689 3.19505L11.0285 7.5856C11.0288 7.58622 11.0291 7.58685 11.0294 7.58748C11.1268 7.81262 11.1675 8.05823 11.1479 8.30277C11.1283 8.54801 11.0487 8.78465 10.916 8.99185L10.9111 8.99956L9.34841 11.3763C10.0458 12.8147 11.209 13.9751 12.6491 14.669L12.6521 14.667L14.9941 13.1026C15.2019 12.9622 15.4418 12.8766 15.6915 12.8536C15.9413 12.8306 16.1927 12.871 16.4227 12.971C16.4237 12.9714 16.4246 12.9718 16.4255 12.9722L20.8053 14.8533C21.1051 14.9792 21.3555 15.1997 21.5183 15.4813C21.6819 15.7642 21.748 16.093 21.7064 16.4172C21.5442 17.6835 20.9261 18.8472 19.9678 19.6908C19.0096 20.5343 17.7768 20.9997 16.5002 21C12.9197 21 9.4858 19.5777 6.95406 17.0459C4.42232 14.5142 3 11.0804 3 7.5C3.00029 6.22337 3.46573 4.99042 4.30925 4.03216C5.15271 3.07396 6.31663 2.45587 7.58281 2.29358ZM8.67187 11.7L7.99536 12.0238C7.88459 11.7923 7.83505 11.5363 7.85147 11.2803C7.86788 11.0242 7.9497 10.7767 8.08911 10.5613L8.09205 10.5567L9.65268 8.18309L9.65126 8.17982L7.76689 3.78294C6.86505 3.90017 6.03617 4.34051 5.43518 5.02326C4.8327 5.70769 4.50025 6.58818 4.5 7.5M8.67187 11.7L7.99685 12.0269C8.84248 13.7732 10.2545 15.1816 12.003 16.0227L12.0072 16.0247C12.2426 16.1362 12.503 16.1844 12.7627 16.1647C13.0217 16.145 13.2712 16.0584 13.4867 15.9133C13.4873 15.913 13.4879 15.9126 13.4884 15.9122L15.8291 14.3487L20.2165 16.2329L20.2177 16.2334C20.1005 17.1352 19.6595 17.9638 18.9767 18.5648C18.2923 19.1673 17.4118 19.4998 16.5 19.5M4.5 7.5C4.50004 10.6825 5.76432 13.7349 8.01472 15.9853C10.2651 18.2357 13.3175 19.5 16.5 19.5"
+                      fill="#D62E2E"
+                    />
+                  </svg>
+                  <span>+7 (812) 389-30-62</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="header__content">
+              <div class="header__menu menu">
+  <div class="menu__wrapper">
+    <ul class="menu__list">
+      <!-- Многоуровневое меню -->
+      <li class="menu__item dropdown">
+        <a href="#">Оборудование</a>
+        <div class="menu__mobile">
+          <div class="menu__mobile--info">
+            <span class="menu__mobile--back">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                  fill="#435882"
+                />
+              </svg>
+              <p>Назад</p>
+            </span>
+
+            <div class="menu__mobile--name">Оборудование</div>
+            <ul class="menu__sub-list">
+              <li class="menu__item">
+                <a href="#">Конвейерное оборудование</a>
+              </li>
+              <li class="menu__item"><a href="#">Групповая упаковка</a></li>
+              <li class="menu__item">
+                <a href="#">Автоматическая сборка гофротары</a>
+              </li>
+              <li class="menu__item"><a href="#">Упаковка паллет</a></li>
+              <li class="menu__item">
+                <a href="#">Маркировочное оборудование</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item dropdown">
+        <a href="#">Упаковка</a>
+        <div class="menu__mobile">
+          <div class="menu__mobile--info">
+            <span class="menu__mobile--back">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                  fill="#435882"
+                />
+              </svg>
+              <p>Назад</p>
+            </span>
+
+            <div class="menu__mobile--name">Упаковка</div>
+            <ul class="menu__sub-list">
+              <li class="menu__item">
+                <a href="#">Конвейерное оборудование</a>
+              </li>
+              <li class="menu__item"><a href="#">Групповая упаковка</a></li>
+              <li class="menu__item">
+                <a href="#">Автоматическая сборка гофротары</a>
+              </li>
+              <li class="menu__item"><a href="#">Упаковка паллет</a></li>
+              <li class="menu__item">
+                <a href="#">Маркировочное оборудование</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item dropdown">
+        <a href="#">Расходные материалы</a>
+        <div class="menu__mobile">
+          <div class="menu__mobile--info">
+            <span class="menu__mobile--back">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                  fill="#435882"
+                />
+              </svg>
+              <p>Назад</p>
+            </span>
+
+            <div class="menu__mobile--name">Расходные материалы</div>
+            <ul class="menu__sub-list">
+              <li class="menu__item">
+                <a href="#">Конвейерное оборудование</a>
+              </li>
+              <li class="menu__item"><a href="#">Групповая упаковка</a></li>
+              <li class="menu__item">
+                <a href="#">Автоматическая сборка гофротары</a>
+              </li>
+              <li class="menu__item"><a href="#">Упаковка паллет</a></li>
+              <li class="menu__item">
+                <a href="#">Маркировочное оборудование</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item dropdown">
+        <a href="#">О нас</a>
+        <div class="menu__mobile">
+          <div class="menu__mobile--info">
+            <span class="menu__mobile--back">
+              <svg
+                width="8"
+                height="14"
+                viewBox="0 0 8 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.70711 0.292893C8.09763 0.683417 8.09763 1.31658 7.70711 1.70711L2.41421 7L7.70711 12.2929C8.09763 12.6834 8.09763 13.3166 7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893Z"
+                  fill="#435882"
+                />
+              </svg>
+              <p>Назад</p>
+            </span>
+
+            <div class="menu__mobile--name">О нас</div>
+            <ul class="menu__sub-list">
+              <li class="menu__item">
+                <a href="#">Конвейерное оборудование</a>
+              </li>
+              <li class="menu__item"><a href="#">Групповая упаковка</a></li>
+              <li class="menu__item">
+                <a href="#">Автоматическая сборка гофротары</a>
+              </li>
+              <li class="menu__item"><a href="#">Упаковка паллет</a></li>
+              <li class="menu__item">
+                <a href="#">Маркировочное оборудование</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="menu__item"><a href="#">Проекты</a></li>
+      <li class="menu__item"><a href="#">Контакты</a></li>
+    </ul>
+  </div>
+</div>
+
+
+              <div class="header__loop">
+                <div class="header__field">
+                  <div class="header__field--info">
+                    <form action="#">
+                      <input type="text" placeholder="Поиск по каталогу" />
+                    </form>
+                  </div>
+                </div>
+                <svg
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.5 19C15.9183 19 19.5 15.4183 19.5 11C19.5 6.58172 15.9183 3 11.5 3C7.08172 3 3.5 6.58172 3.5 11C3.5 15.4183 7.08172 19 11.5 19Z"
+                    stroke="#1C1E24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M21.5004 21L17.1504 16.65"
+                    stroke="#1C1E24"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <div class="header__aside--mobile">
+                  <a href="#" class="header__info--item">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M4 5C3.45228 5 3 5.45228 3 6V18C3 18.5477 3.45228 19 4 19H20C20.5477 19 21 18.5477 21 18V6C21 5.45228 20.5477 5 20 5H4ZM1 6C1 4.34772 2.34772 3 4 3H20C21.6523 3 23 4.34772 23 6V18C23 19.6523 21.6523 21 20 21H4C2.34772 21 1 19.6523 1 18V6Z"
+                      fill="#D62E2E"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1.18085 5.42654C1.49757 4.97409 2.1211 4.86406 2.57355 5.18077L12.0001 11.7793L21.4266 5.18077C21.8791 4.86406 22.5026 4.97409 22.8193 5.42654C23.136 5.87899 23.026 6.50252 22.5735 6.81923L12.5735 13.8192C12.2292 14.0603 11.7709 14.0603 11.4266 13.8192L1.42662 6.81923C0.974174 6.50252 0.864139 5.87899 1.18085 5.42654Z"
+                      fill="#D62E2E"
+                    />
+                  </svg>
+                  <span>info@itagrogroup.ru</span>
+                </a>
+                <a href="#" class="header__info--item">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M7.58281 2.29358C7.90697 2.252 8.23581 2.3181 8.51873 2.48171C8.80038 2.64459 9.02097 2.89514 9.14689 3.19505L11.0285 7.5856C11.0288 7.58622 11.0291 7.58685 11.0294 7.58748C11.1268 7.81262 11.1675 8.05823 11.1479 8.30277C11.1283 8.54801 11.0487 8.78465 10.916 8.99185L10.9111 8.99956L9.34841 11.3763C10.0458 12.8147 11.209 13.9751 12.6491 14.669L12.6521 14.667L14.9941 13.1026C15.2019 12.9622 15.4418 12.8766 15.6915 12.8536C15.9413 12.8306 16.1927 12.871 16.4227 12.971C16.4237 12.9714 16.4246 12.9718 16.4255 12.9722L20.8053 14.8533C21.1051 14.9792 21.3555 15.1997 21.5183 15.4813C21.6819 15.7642 21.748 16.093 21.7064 16.4172C21.5442 17.6835 20.9261 18.8472 19.9678 19.6908C19.0096 20.5343 17.7768 20.9997 16.5002 21C12.9197 21 9.4858 19.5777 6.95406 17.0459C4.42232 14.5142 3 11.0804 3 7.5C3.00029 6.22337 3.46573 4.99042 4.30925 4.03216C5.15271 3.07396 6.31663 2.45587 7.58281 2.29358ZM8.67187 11.7L7.99536 12.0238C7.88459 11.7923 7.83505 11.5363 7.85147 11.2803C7.86788 11.0242 7.9497 10.7767 8.08911 10.5613L8.09205 10.5567L9.65268 8.18309L9.65126 8.17982L7.76689 3.78294C6.86505 3.90017 6.03617 4.34051 5.43518 5.02326C4.8327 5.70769 4.50025 6.58818 4.5 7.5M8.67187 11.7L7.99685 12.0269C8.84248 13.7732 10.2545 15.1816 12.003 16.0227L12.0072 16.0247C12.2426 16.1362 12.503 16.1844 12.7627 16.1647C13.0217 16.145 13.2712 16.0584 13.4867 15.9133C13.4873 15.913 13.4879 15.9126 13.4884 15.9122L15.8291 14.3487L20.2165 16.2329L20.2177 16.2334C20.1005 17.1352 19.6595 17.9638 18.9767 18.5648C18.2923 19.1673 17.4118 19.4998 16.5 19.5M4.5 7.5C4.50004 10.6825 5.76432 13.7349 8.01472 15.9853C10.2651 18.2357 13.3175 19.5 16.5 19.5"
+                      fill="#D62E2E"
+                    />
+                  </svg>
+                  <span>+7 (812) 389-30-62</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="header__mobile">
+              <a href="#" class="header__mobile--item">
+                <svg
+                  width="19"
+                  height="19"
+                  viewBox="0 0 19 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.58281 0.293582C4.90697 0.251997 5.23581 0.318096 5.51873 0.48171C5.80038 0.644595 6.02097 0.895136 6.14689 1.19505L8.02854 5.5856C8.02882 5.58622 8.02909 5.58685 8.02936 5.58748C8.12678 5.81262 8.16749 6.05823 8.14793 6.30277C8.12831 6.54801 8.04867 6.78465 7.91604 6.99185L7.9111 6.99956L6.34841 9.37625C7.04583 10.8147 8.20903 11.9751 9.64911 12.669L9.65214 12.667L11.9941 11.1026C12.2019 10.9622 12.4418 10.8766 12.6915 10.8536C12.9413 10.8306 13.1927 10.871 13.4227 10.971C13.4237 10.9714 13.4246 10.9718 13.4255 10.9722L17.8053 12.8533C18.1051 12.9792 18.3555 13.1997 18.5183 13.4813C18.6819 13.7642 18.748 14.093 18.7064 14.4172C18.5442 15.6835 17.9261 16.8472 16.9678 17.6908C16.0096 18.5343 14.7768 18.9997 13.5002 19C9.91975 19 6.4858 17.5777 3.95406 15.0459C1.42232 12.5142 0 9.08043 0 5.5C0.000287756 4.22337 0.465735 2.99042 1.30925 2.03216C2.15271 1.07396 3.31663 0.455868 4.58281 0.293582ZM5.67187 9.7L4.99536 10.0238C4.88459 9.79232 4.83505 9.53634 4.85147 9.28028C4.86788 9.02423 4.9497 8.77667 5.08911 8.56126L5.09205 8.55671L6.65268 6.18309L6.65126 6.17982L4.76689 1.78294C3.86505 1.90017 3.03617 2.34051 2.43518 3.02326C1.8327 3.70769 1.50025 4.58818 1.5 5.5M5.67187 9.7L4.99685 10.0269C5.84248 11.7732 7.25454 13.1816 9.00298 14.0227L9.00716 14.0247C9.24257 14.1362 9.50296 14.1844 9.76269 14.1647C10.0217 14.145 10.2712 14.0584 10.4867 13.9133C10.4873 13.913 10.4879 13.9126 10.4884 13.9122L12.8291 12.3487L17.2165 14.2329L17.2177 14.2334C17.1005 15.1352 16.6595 15.9638 15.9767 16.5648C15.2923 17.1673 14.4118 17.4998 13.5 17.5M1.5 5.5C1.50004 8.68254 2.76432 11.7349 5.01472 13.9853C7.26512 16.2357 10.3175 17.5 13.5 17.5"
+                    fill="white"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" class="header__mobile--item burger">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+
+
+<div class="showcase">
+  <div
+    class="showcase__bg"
+    data-animate-offset="300"
+    data-animate-delay="0.3"
+    data-animate="animate__zoomIn"
+  >
+    <img src="images/bg-showcase.webp" alt="" />
+  </div>
+  <div class="container">
+    <div
+      class="showcase__inner"
+      data-animate-offset="300"
+      data-animate-delay="1.6"
+      data-animate="animate__zoomIn"
+    >
+      <h1 class="showcase__title title">
+        Технологические решения для пищевой промышленности
+      </h1>
+
+      <p class="showcase__text">
+        Мы проектируем производственные линии и предлагаем оптимальные
+        технологические решения для пищевой промышленности.
+      </p>
+
+      <a href="#" class="showcase__btn btn btn-red">Каталог</a>
+    </div>
+  </div>
+
+  <div class="showcase__animation">
+    <div class="showcase__items">
+      <div class="showcase__item">
+        <img src="images/show-1.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-2.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-3.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-4.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-5.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-1.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-2.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-3.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-4.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-5.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-1.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-2.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-3.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-4.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-5.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-1.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-2.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-3.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-4.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-5.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-1.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-2.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-3.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-4.webp" alt="" />
+      </div>
+      <div class="showcase__item">
+        <img src="images/show-5.webp" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-main">
+  <div class="container">
+    <div class="about-main__inner">
+      <h2
+        class="about-main__title title-small"
+        data-animate-offset="100"
+        data-animate-delay="1.6"
+        data-animate="animate__fadeInUp"
+      >
+        Наши решения
+      </h2>
+
+      <div
+        class="about-main__text"
+        data-animate-offset="100"
+        data-animate-delay="1.6"
+        data-animate="animate__fadeInUp"
+      >
+        Специализируемся на поставке оборудования, запасных частей и расходных
+        материалов для предприятий пищевой промышленности.
+      </div>
+
+      <div class="about-main__items">
+        <a
+          href="#"
+          class="about-main__item"
+          data-animate-offset="100"
+          data-animate-delay="1.6"
+          data-animate="animate__fadeInUp"
+        >
+          <span>Оборудование</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="about-main__item"
+          data-animate-offset="100"
+          data-animate-delay="1.6"
+          data-animate="animate__fadeInUp"
+        >
+          <span>Упаковка</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="about-main__item"
+          data-animate-offset="100"
+          data-animate-delay="1.6"
+          data-animate="animate__fadeInUp"
+        >
+          <span>Расходные материалы</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12H19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 5L19 12L12 19"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="about-main__img"
+    data-animate-offset="400"
+    data-animate-delay="0.8"
+    data-animate="animate__zoomIn"
+  >
+    <img src="images/about-main.webp" alt="" />
+  </div>
+</div>
+
+<div class="comp-main">
+  <div
+    class="comp-main__bg"
+    data-animate-offset="600"
+    data-animate-delay=".5"
+    data-animate="animate__zoomIn"
+  >
+    <img src="images/comp-img.webp" alt="" />
+  </div>
+
+  <div class="container">
+    <div class="comp-main__inner">
+      <h2
+        class="comp-main__title title-small"
+        data-animate-offset="300"
+        data-animate-delay="1"
+        data-animate="animate__fadeInUp"
+      >
+        О компании
+      </h2>
+
+      <div class="comp-main__text">
+        <p
+          data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp"
+        >
+          Компания Itagro Group – официальный партнер известных европейских
+          производителей оборудования на территории Российской Федерации.
+        </p>
+        <p
+          data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp"
+        >
+          Основа нашей работы — это квалифицированный подбор оборудования
+          с учётом потребностей и специфики производства заказчика.
+        </p>
+      </div>
+
+      <a
+        href="#"
+        class="comp-main__btn btn"
+        data-animate-offset="300"
+        data-animate-delay="1"
+        data-animate="animate__fadeInUp"
+        >Подробнее о компании</a
+      >
+
+      <div class="comp-main__items">
+        <div class="comp-main__item">
+          <div class="comp-main__number" data-number="15 ">15</div>
+          <div class="comp-main__desc">лет на рынке</div>
+        </div>
+        <div class="comp-main__item">
+          <div class="comp-main__number" data-number="100+">100+</div>
+          <div class="comp-main__desc">реализовано проектов</div>
+        </div>
+        <div class="comp-main__item">
+          <div class="comp-main__number" data-number="300+">300+</div>
+          <div class="comp-main__desc">постоянных заказчиков</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="adva-main">
+  <div class="container">
+    <div class="adva-main__inner">
+      <h2
+        class="adva-main__title title-small"
+        data-animate-offset="300"
+        data-animate-delay="1"
+        data-animate="animate__fadeInUp"
+      >
+        Наши преимущества
+      </h2>
+
+      <p
+        class="adva-main__text"
+        data-animate-offset="300"
+        data-animate-delay="1"
+        data-animate="animate__fadeInUp"
+      >
+        Мы тщательно подходим к решению задач клиента и воплощению проекта
+        на всех его этапах: от разработки концепции объекта до обучения
+        персонала заказчика и технической поддержки.
+      </p>
+
+      <div class="adva-main__items">
+        <div
+          class="adva-main__item"
+          data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp"
+        >
+          <div class="adva-main__icon">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14.1293 1.39079C14.37 0.8491 14.9072 0.5 15.5 0.5C17.0913 0.5 18.6174 1.13214 19.7426 2.25736C20.8679 3.38258 21.5 4.9087 21.5 6.5V11H28.4823C29.1315 10.994 29.7742 11.1285 30.3666 11.3943C30.9617 11.6614 31.4916 12.0547 31.9197 12.547C32.3477 13.0393 32.6637 13.6187 32.8455 14.2452C33.0274 14.8716 33.0709 15.5302 32.973 16.1751L30.903 29.6749C30.903 29.6753 30.9031 29.6745 30.903 29.6749C30.7401 30.7475 30.195 31.7263 29.3683 32.4289C28.5437 33.1298 27.4942 33.51 26.4122 33.5H5C3.80653 33.5 2.66193 33.0259 1.81802 32.182C0.974106 31.3381 0.5 30.1935 0.5 29V18.5C0.5 17.3065 0.974106 16.1619 1.81802 15.318C2.66193 14.4741 3.80653 14 5 14H8.52519L14.1293 1.39079ZM11 15.8183L16.4117 3.6419C16.8638 3.78612 17.2796 4.03691 17.6213 4.37868C18.1839 4.94129 18.5 5.70435 18.5 6.5V12.5C18.5 13.3284 19.1716 14 20 14H28.49L28.507 13.9999C28.7244 13.9974 28.9398 14.0423 29.1382 14.1313C29.3365 14.2204 29.5132 14.3515 29.6559 14.5155C29.7986 14.6796 29.9039 14.8728 29.9645 15.0816C30.0251 15.2902 30.0396 15.5095 30.0071 15.7243C30.007 15.7245 30.0071 15.7241 30.0071 15.7243L27.937 29.2251C27.8827 29.5828 27.701 29.9088 27.4254 30.1431C27.1497 30.3774 26.7987 30.5042 26.437 30.5001L11 30.5V15.8183ZM8 30.5V17H5C4.60218 17 4.22064 17.158 3.93934 17.4393C3.65804 17.7206 3.5 18.1022 3.5 18.5V29C3.5 29.3978 3.65804 29.7794 3.93934 30.0607C4.22064 30.342 4.60218 30.5 5 30.5H8Z"
+                fill="#D62E2E"
+              />
+            </svg>
+          </div>
+          <div class="adva-main__name">Оптимальные решения</div>
+
+          <div class="adva-main__desc">
+            Уникальный опыт, накопленный специалистами «Итагро Групп», позволяет
+            проектировать производственные линии и предлагать оптимальные
+            решения почти по всем направлениям пищевой промышленности
+          </div>
+        </div>
+        <div
+          class="adva-main__item"
+          data-animate-offset="300"
+          data-animate-delay="1.2"
+          data-animate="animate__fadeInUp"
+        >
+          <div class="adva-main__icon">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.1967 23.1967C3.60322 21.7902 5.51088 21 7.5 21H18C19.9891 21 21.8968 21.7902 23.3033 23.1967C24.7098 24.6032 25.5 26.5109 25.5 28.5V31.5C25.5 32.3284 24.8284 33 24 33C23.1716 33 22.5 32.3284 22.5 31.5V28.5C22.5 27.3065 22.0259 26.1619 21.182 25.318C20.3381 24.4741 19.1935 24 18 24H7.5C6.30653 24 5.16193 24.4741 4.31802 25.318C3.47411 26.1619 3 27.3065 3 28.5V31.5C3 32.3284 2.32843 33 1.5 33C0.671573 33 0 32.3284 0 31.5V28.5C0 26.5109 0.790177 24.6032 2.1967 23.1967Z"
+                fill="#D62E2E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12.75 6C10.2647 6 8.25 8.01472 8.25 10.5C8.25 12.9853 10.2647 15 12.75 15C15.2353 15 17.25 12.9853 17.25 10.5C17.25 8.01472 15.2353 6 12.75 6ZM5.25 10.5C5.25 6.35786 8.60786 3 12.75 3C16.8921 3 20.25 6.35786 20.25 10.5C20.25 14.6421 16.8921 18 12.75 18C8.60786 18 5.25 14.6421 5.25 10.5Z"
+                fill="#D62E2E"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M35.5607 12.4393C36.1464 13.0251 36.1464 13.9749 35.5607 14.5607L29.5607 20.5607C28.9749 21.1464 28.0251 21.1464 27.4393 20.5607L24.4393 17.5607C23.8536 16.9749 23.8536 16.0251 24.4393 15.4393C25.0251 14.8536 25.9749 14.8536 26.5607 15.4393L28.5 17.3787L33.4393 12.4393C34.0251 11.8536 34.9749 11.8536 35.5607 12.4393Z"
+                fill="#D62E2E"
+              />
+            </svg>
+          </div>
+          <div class="adva-main__name">Только профессионалы</div>
+
+          <div class="adva-main__desc">
+            Сервисная служба профессионально осуществляет пусконаладочные
+            работы, ввод оборудования в эксплуатацию, а также обучение
+            операторов заказчика эффективной работе
+          </div>
+        </div>
+        <div
+          class="adva-main__item"
+          data-animate-offset="300"
+          data-animate-delay="1.4"
+          data-animate="animate__fadeInUp"
+        >
+          <div class="adva-main__icon">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_660_6823)">
+                <path
+                  d="M32.9021 2.33408C32.4284 1.8599 31.7812 1.5982 31.0804 1.5982C30.293 1.5982 29.4999 1.92999 28.8918 2.51107L26.2818 4.62958L26.1802 4.72184C25.6031 5.29805 25.376 6.10757 25.5157 6.92286L19.4312 12.8308L18.4101 11.9472C19.142 9.08483 19.052 5.27187 16.5835 2.80339C14.7759 0.995823 12.4631 0 10.0718 0C9.12125 0 8.18176 0.158799 7.27908 0.471519C6.86567 0.614793 6.54896 0.951909 6.4323 1.37375C6.31564 1.79559 6.41367 2.24714 6.69401 2.58293L9.97335 6.50235L9.81189 9.02318L7.08657 9.33412L3.19599 6.07918C2.8602 5.79795 2.4082 5.69992 1.98636 5.81747C1.56452 5.93457 1.22741 6.25128 1.08413 6.6647C0.0213307 9.73378 0.957715 13.0393 3.65331 15.7331C5.10557 17.1863 7.19658 17.9541 9.69922 17.9541C9.88242 17.9541 10.0669 17.9448 10.2515 17.9359C10.1588 18.0166 10.0656 18.0965 9.97779 18.1843L2.50224 25.6594C0.426757 27.7349 0.426757 31.1114 2.50224 33.1869L3.75622 34.4408C4.76136 35.4464 6.09829 36 7.51995 36C8.9416 36 10.2785 35.4464 11.2837 34.4408L18.7588 26.9653C19.1731 26.5514 19.4991 26.0861 19.7448 25.5889L26.3847 33.2609C26.406 33.2853 26.4282 33.3084 26.4503 33.3315C27.1947 34.0753 28.3116 34.4852 29.5971 34.4852C31.1589 34.4852 32.7442 33.8708 33.7338 32.8817C35.4735 31.142 36.0218 27.4404 34.1827 25.6C34.1592 25.5774 34.1366 25.5552 34.1122 25.5352L24.4445 17.1703L30.022 11.4265C30.1755 11.4526 30.329 11.4655 30.4838 11.4655C31.1518 11.4655 31.7683 11.2158 32.2208 10.7638L34.4316 8.05219C34.9377 7.52345 35.2544 6.85676 35.328 6.16656C35.4136 5.35837 35.1515 4.58389 34.609 4.04184L32.9021 2.33408ZM16.8771 25.0837L9.40203 32.5592C8.89946 33.0618 8.23099 33.3386 7.51995 33.3386C6.8089 33.3386 6.14087 33.0618 5.63786 32.5592L4.38388 31.3052C3.34636 30.2673 3.34636 28.579 4.38388 27.5419L11.8594 20.0659C12.362 19.5634 13.0305 19.2866 13.7411 19.2866C13.95 19.2866 14.1545 19.3141 14.3528 19.3598L17.6521 23.1723C17.66 23.8629 17.4032 24.5576 16.8771 25.0837ZM31.8513 31C31.3585 31.4928 30.4523 31.8238 29.5962 31.8238C29.059 31.8238 28.5999 31.6938 28.3573 31.4738L14.2481 15.1716C13.8945 14.763 13.3285 14.6087 12.8175 14.7812C11.8239 15.1157 10.7456 15.2922 9.69878 15.2922C7.94311 15.2922 6.46424 14.7803 5.53495 13.8506C4.69394 13.0096 3.5127 11.5218 3.33616 9.6668L5.81573 11.7414C6.09519 11.9756 6.45759 12.0843 6.82087 12.043L11.2189 11.5409C11.859 11.4677 12.3549 10.947 12.3957 10.3038L12.6623 6.14128C12.684 5.80017 12.574 5.46439 12.3549 5.20268L10.2306 2.66366C11.8554 2.70802 13.4372 3.42173 14.7005 4.68503C16.4384 6.42339 16.4007 9.67922 15.6298 11.969C15.4573 12.4808 15.6116 13.0464 16.0202 13.3999L32.3246 27.5091C32.9159 28.1563 32.7761 30.0747 31.8513 31ZM32.4967 6.22556L30.4088 8.78586C30.3871 8.77744 30.3627 8.7659 30.3361 8.74994L29.4325 8.21321L22.4298 15.4257L21.4508 14.5789L28.7299 7.51059L28.1936 6.60792C28.1781 6.58042 28.1656 6.55602 28.1581 6.53473L30.6159 4.53909L30.718 4.44683C30.8506 4.31509 30.9832 4.2694 31.0657 4.26186L32.683 5.87913C32.6777 5.94566 32.6346 6.08716 32.4967 6.22556Z"
+                  fill="#D62E2E"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_660_6823">
+                  <rect width="36" height="36" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="adva-main__name">Сопровождение и сервис</div>
+
+          <div class="adva-main__desc">
+            Инженеры и технические специалисты нашей компании постоянно повышают
+            свою квалификацию, обучаясь на предприятиях-изготовителях
+            оборудования, международных технических семинарах и форумах
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="dov-main">
+  <div class="container">
+    <div class="dov-main__inner">
+      <div class="dov-main__top">
+        <h2 class="dov-main__title title-small">Нам доверяют</h2>
+
+        <a href="#" class="dov-main__btn btn">Стать партнёром</a>
+      </div>
+
+      <div class="dov-main__animation">
+        <div class="dov-main__items">
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d1.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d2.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d3.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d4.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d5.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d6.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d7.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d8.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d9.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d10.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d11.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d12.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d13.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d14.webp" alt="" />
+          </div>
+          <div class="dov-main__item"  data-animate-offset="300"
+          data-animate-delay="1"
+          data-animate="animate__fadeInUp">
+            <img src="images/d15.webp" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="dov-main__btn btn mobile">Стать партнёром</a>
+    </div>
+  </div>
+</div>
+
+<div class="product-home">
+  <div
+    class="product-home__map"
+    class="comp-main__bg"
+    data-animate-offset="600"
+    data-animate-delay=".5"
+    data-animate="animate__zoomIn"
+  >
+    <img src="images/home-map.webp" alt="" />
+  </div>
+
+  <div class="product-home__bg">
+    <img src="images/it-img.webp" alt="" />
+  </div>
+
+  <div class="container">
+    <div
+      class="product-home__inner"
+      data-animate-offset="300"
+      data-animate-delay="1"
+      data-animate="animate__fadeInUp"
+    >
+      <h2 class="product-home__title title-small">
+        Поставляем оборудование по всей стране
+      </h2>
+
+      <div class="product-home__text">
+        Специалисты Itagro Group тщательно изучают потребность клиента,
+        производственные условия, используемое оборудование, предлагая такие
+        решения, которые делают производство стабильным и экономически
+        целесообразным.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brand-home">
+  <div class="brand-home__bg">
+    <img src="images/brand-home.webp" alt="" />
+  </div>
+  <div class="container">
+    <div class="brand-home__inner">
+      <h2 class="brand-home__title title-small">
+        Сотрудничаем с проверенными брендами
+      </h2>
+
+      <div class="brand__animation">
+        <div class="brand-home__items">
+          <div class="brand-home__item" data-animate-offset="300"
+        data-animate-delay="0.5"
+        data-animate="animate__fadeInUp">
+            <img src="images/b1.webp" alt="" />
+          </div>
+          <div class="brand-home__item" data-animate-offset="300"
+        data-animate-delay="0.5"
+        data-animate="animate__fadeInUp">
+            <img src="images/b2.webp" alt="" />
+          </div>
+          <div class="brand-home__item" data-animate-offset="300"
+        data-animate-delay="0.5"
+        data-animate="animate__fadeInUp">
+            <img src="images/b3.webp" alt="" />
+          </div>
+          <div class="brand-home__item" data-animate-offset="300"
+        data-animate-delay="0.5"
+        data-animate="animate__fadeInUp">
+            <img src="images/b4.webp" alt="" />
+          </div>
+          <div class="brand-home__item" data-animate-offset="300"
+        data-animate-delay="0.5"
+        data-animate="animate__fadeInUp">
+            <img src="images/b5.webp" alt="" />
+          </div>
+          <div class="brand-home__item mobile">
+            <img src="images/b1.webp" alt="" />
+          </div>
+          <div class="brand-home__item mobile">
+            <img src="images/b2.webp" alt="" />
+          </div>
+          <div class="brand-home__item mobile">
+            <img src="images/b3.webp" alt="" />
+          </div>
+          <div class="brand-home__item mobile">
+            <img src="images/b4.webp" alt="" />
+          </div>
+          <div class="brand-home__item mobile">
+            <img src="images/b5.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="proj-home">
+  <div class="container">
+    <div class="proj-home__inner">
+      <div class="proj-home__top">
+        <h2 class="proj-home__title title-small">
+          Воплощаем в жизнь самые амбициозные проекты
+        </h2>
+        <a href="#" class="proj-home__btn btn">Все проекты</a>
+      </div>
+
+      <div class="proj-home__items">
+        <div class="proj-home__item" data-animate-offset="300"
+        data-animate-delay="0.4"
+        data-animate="animate__fadeInUp">
+          <div class="proj-home__img">
+            <img src="images/1.webp" alt="" />
+          </div>
+
+          <div class="proj-home__name">
+            Проект на молочном заводе «Сибирское Молоко»
+          </div>
+          <div class="proj-home__text">
+            Наша компания была выбрана поставщиком аналогичного комплекса
+            оборудования на площадке в Омске
+          </div>
+
+          <a href="#" class="proj-home__more">
+            <span>Смотреть проект</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 5L19 12L12 19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="proj-home__item" data-animate-offset="300"
+        data-animate-delay="0.6"
+        data-animate="animate__fadeInUp">
+          <div class="proj-home__img">
+            <img src="images/2.webp" alt="" />
+          </div>
+
+          <div class="proj-home__name">
+            Поставка и интеграция оборудования для молочного завода в Тольятти
+          </div>
+          <div class="proj-home__text">
+            Поставка и интеграция оборудования для молочного завода в Тольятти
+          </div>
+
+          <a href="#" class="proj-home__more">
+            <span>Смотреть проект</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 5L19 12L12 19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="proj-home__item" data-animate-offset="300"
+        data-animate-delay="0.8"
+        data-animate="animate__fadeInUp">
+          <div class="proj-home__img">
+            <img src="images/3.webp" alt="" />
+          </div>
+
+          <div class="proj-home__name">
+            Проект на молочном заводе «Сибирское Молоко»
+          </div>
+          <div class="proj-home__text">
+            Наша компания была выбрана поставщиком аналогичного комплекса
+            оборудования на площадке в Омске
+          </div>
+
+          <a href="#" class="proj-home__more">
+            <span>Смотреть проект</span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12H19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 5L19 12L12 19"
+                stroke="#324773"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+
+         <a href="#" class="proj-home__btn btn mobile">Все проекты</a>
+    </div>
+  </div>
+</div>
+
+<div class="feed">
+  <div class="container">
+    <div class="feed__inner">
+      <h2 class="feed__title title-small">
+        Ответим на вопросы <br />
+        и поможем с выбором
+      </h2>
+
+      <div class="feed__content">
+        <div class="feed__form">
+          <form action="#">
+            <label class="field">
+              <input type="text" placeholder="Имя" />
+            </label>
+
+            <label class="field">
+              <div class="prefix">+7</div>
+              <input type="text" placeholder="999 123-45-67" class="mask" />
+            </label>
+
+            <label class="field field--error">
+              <input type="text" placeholder="E-mail" />
+            </label>
+
+            <label class="field">
+              <textarea placeholder="Что вас интересует?"></textarea>
+            </label>
+
+            <label class="checkbox">
+              <span class="checkbox__inner">
+                <input type="checkbox" />
+                <span></span>
+              </span>
+              <span class="checkbox__text">
+                Я даю свое согласие на обработку персональных данных, в
+                соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О
+                персональных данных», на условиях и для целей, определенных в
+                <a href="#">Согласии на обработку персональных данных </a>
+              </span>
+            </label>
+
+            <button type="submit" class="feed__btn btn">Отправить</button>
+          </form>
+        </div>
+
+        <div class="feed__info">
+          <div class="feed__map">
+            <div style="position: relative; overflow: hidden">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=30.298548%2C60.023506&mode=search&oid=1208118830&ol=biz&z=17"
+                width="100%"
+                height="100%"
+                frameborder="1"
+                allowfullscreen="true"
+                style="position: relative"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="feed__items">
+            <div class="feed__item">
+              <span class="feed__label">Телефон</span>
+              <a href="#">+7 (812) 389-30-62</a>
+            </div>
+            <div class="feed__item">
+              <span class="feed__label">Телефон</span>
+              <a href="#">info@itagrogroup.ru</a>
+            </div>
+            <div class="feed__item">
+              <span class="feed__label">Адрес</span>
+              <p>
+                197375, Россия, г. Санкт-Петербург, ул. Вербная, д. 27, литер А
+              </p>
+            </div>
+            <div class="feed__item">
+              <span class="feed__label">Время работы</span>
+              <p>Понедельник - пятница, с 10:00 до 18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+
+			<div class="footer__top">
+
+				<a href="#" class="footer__logo">
+					<img src="images/logo-foot.svg" alt="">
+				</a>
+
+				<div class="footer__logo--text">Комплексные решения для предприятий пищевой промышленности</div>
+			</div>
+
+			<div class="footer__content">
+
+				<div class="footer__item">
+
+					<a href="#" class="footer__label">Оборудование</a>
+
+					<ul class="footer__nav">
+						<li>
+							<a href="#">Конвейерное оборудование</a>
+						</li>
+						<li>
+							<a href="#">Групповая упаковка</a>
+						</li>
+						<li>
+							<a href="#">Автоматическая сборка гофротары</a>
+						</li>
+						<li>
+							<a href="#">Упаковка паллет</a>
+						</li>
+						<li>
+							<a href="#">Маркировочное оборудование</a>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="footer__item">
+
+					<a href="#" class="footer__label">Упаковка</a>
+
+					<ul class="footer__nav">
+						<li>
+							<a href="#">Влаговпитывающие салфетки</a>
+						</li>
+						<li>
+							<a href="#">Пленка термоусадочная ПОФ</a>
+						</li>
+						<li>
+							<a href="#">Автоматическая сборка гофротары</a>
+						</li>
+						<li>
+							<a href="#">Термоклей для гофролотка</a>
+						</li>
+						<li>
+							<a href="#">Пленка под запайку</a>
+						</li>
+
+					</ul>
+				</div>
+
+				
+				<div class="footer__item">
+
+					<a href="#" class="footer__label">Расходные материалы</a>
+
+					<ul class="footer__nav">
+						<li>
+							<a href="#">Запасные части</a>
+						</li>
+						<li>
+							<a href="#">Термоголовки</a>
+						</li>
+						<li>
+							<a href="#">Риббоны</a>
+						</li>
+						<li>
+							<a href="#">Чернила и растворители для принтеров</a>
+						</li>
+						<li>
+							<a href="#">Прокладки для корзин автоклавов</a>
+						</li>
+						<li>
+							<a href="#">Режущий инструмент</a>
+						</li>
+						<li>
+							<a href="#">Противни хлебопекарные</a>
+						</li>
+						
+
+					</ul>
+				</div>
+
+				<div class="footer__info">
+					<a href="#">
+						О компании
+					</a>
+					<a href="#">
+					Проекты
+					</a>
+					<a href="#">
+					Контакты
+					</a>
+					<a href="#">
+					Политика конфиденциальности
+					</a>
+					<a href="#">
+						Согласие на обработку персональных данных
+					</a>
+				</div>
+			</div>
+
+			<div class="footer__bot">
+				<span class="footer__copy">
+					© 2025. Itagro Group. Все права защищены
+				</span>
+
+				<div class="footer__web">
+					© Разработка и продвижение сайта 
+
+					<a href="https://nastart-web.ru/" target="_blank">
+						<svg width="160" height="17" viewBox="0 0 160 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0_2004_870)">
+    <path d="M98.9733 16.1V2.95143H94.0426V0.5H106.667V2.95143H101.736V16.1H98.9733Z" fill="white" />
+    <path d="M79.554 16.1V0.5H85.6745C86.9924 0.5 88.1188 0.722857 89.0537 1.16857C90.003 1.61429 90.7332 2.25314 91.243 3.08514C91.7529 3.91714 92.0084 4.90514 92.0084 6.04913C92.0084 7.19313 91.7529 8.18113 91.243 9.01313C90.7332 9.83031 90.003 10.4617 89.0537 10.9074C88.9876 10.938 88.9204 10.9675 88.8521 10.9959L92.2633 16.1H89.2878L86.2569 11.5391C86.067 11.5489 85.8729 11.5537 85.6745 11.5537H82.3166V16.1H79.554ZM82.3166 9.16913H85.547C86.7657 9.16913 87.6793 8.89431 88.2889 8.34456C88.9124 7.79487 89.2238 7.02969 89.2238 6.04913C89.2238 5.05371 88.9124 4.28857 88.2889 3.75371C87.6793 3.21886 86.7657 2.95143 85.547 2.95143H82.3166V9.16913Z" fill="white" />
+    <path d="M60.4659 16.1L67.1608 0.5H69.8808L76.5971 16.1H73.7064L72.228 12.4897L71.7624 11.3531L71.2968 10.2166L68.5005 3.38935L65.7144 10.2166H71.2968L71.7624 11.3531L72.228 12.4897H64.7869L63.3139 16.1H60.4659Z" fill="white" />
+    <path d="M52.4905 16.1V2.95143H47.5597V0.5H60.1841V2.95143H55.2534V16.1H52.4905Z" fill="white" />
+    <path d="M39.8969 16.1C38.7351 16.1 37.6228 15.9339 36.5601 15.6017C35.4975 15.255 34.6544 14.8145 34.031 14.28L34.9874 12.0917C35.5825 12.5683 36.3193 12.9655 37.1977 13.2833C38.0762 13.6011 38.9759 13.76 39.8969 13.76C40.6762 13.76 41.3067 13.6733 41.7884 13.5C42.2702 13.3267 42.6244 13.0955 42.8511 12.8067C43.0778 12.5033 43.1912 12.1639 43.1912 11.7883C43.1912 11.3261 43.0282 10.9578 42.7023 10.6833C42.3764 10.3945 41.9514 10.1705 41.4271 10.0117C40.917 9.83832 40.3432 9.67946 39.7056 9.535C39.0822 9.39054 38.4517 9.22446 37.8141 9.03668C37.1906 8.83446 36.6168 8.58168 36.0926 8.27832C35.5825 7.96054 35.1645 7.54168 34.8386 7.02168C34.5128 6.50168 34.3498 5.83723 34.3498 5.02833C34.3498 4.205 34.5624 3.45389 34.9874 2.775C35.4266 2.08167 36.0855 1.53278 36.964 1.12833C37.8566 0.709444 38.983 0.5 40.3432 0.5C41.2359 0.5 42.1214 0.615556 42.9999 0.846667C43.8784 1.07778 44.6434 1.41 45.2952 1.84333L44.4239 4.03167C43.7579 3.62722 43.0707 3.33111 42.3623 3.14333C41.6538 2.94111 40.9737 2.84 40.3219 2.84C39.5569 2.84 38.9334 2.93389 38.4517 3.12167C37.9841 3.30945 37.637 3.555 37.4103 3.85833C37.1977 4.16167 37.0915 4.50833 37.0915 4.89833C37.0915 5.36055 37.2473 5.73609 37.5591 6.025C37.8849 6.29946 38.3029 6.51609 38.813 6.675C39.3372 6.83391 39.9182 6.99277 40.5558 7.15168C41.1934 7.29609 41.8239 7.46223 42.4473 7.65C43.0849 7.83777 43.6587 8.08332 44.1688 8.38668C44.693 8.69 45.111 9.10168 45.4227 9.62169C45.7486 10.1417 45.9115 10.7989 45.9115 11.5933C45.9115 12.4022 45.692 13.1533 45.2527 13.8467C44.8276 14.5255 44.1688 15.0745 43.2762 15.4933C42.3835 15.8978 41.2571 16.1 39.8969 16.1Z" fill="white" />
+    <path d="M16.1646 16.1L22.8594 0.5H25.5798L32.2958 16.1H29.4054L27.9267 12.4897L27.4611 11.3531L26.9957 10.2166L24.1993 3.38935L21.4134 10.2166H26.9957L27.4611 11.3531L27.9267 12.4897H20.4858L19.0126 16.1H16.1646Z" fill="white" />
+    <path d="M0 16.1V0.5H2.2741L10.4779 11.0618V0.5H13.2195V16.1H10.9454L2.74167 5.5382V16.1H0Z" fill="white" />
+    <path d="M148.75 16.1V5.73328V0.5H154.465C155.941 0.5 157.101 0.834286 157.946 1.50286C158.805 2.17143 159.234 3.15943 159.234 4.46686C159.234 5.31371 159.047 6.02687 158.671 6.60631C158.309 7.18569 157.799 7.61656 157.141 7.89887C156.987 7.96663 156.827 8.02622 156.66 8.0777C157.108 8.1557 157.509 8.27436 157.866 8.43369C158.564 8.74569 159.093 9.19887 159.456 9.79313C159.818 10.3874 159.999 11.1229 159.999 11.9994C159.999 13.3069 159.57 14.3171 158.711 15.0303C157.866 15.7434 156.585 16.1 154.867 16.1H148.75ZM149.434 15.4314H154.908C156.343 15.4314 157.437 15.1566 158.188 14.6069C158.939 14.0423 159.315 13.1657 159.315 11.9771C159.315 10.7737 158.939 9.89713 158.188 9.34744C157.437 8.78287 156.343 8.50056 154.908 8.50056H149.324L149.313 7.85431H154.485C155.773 7.85431 156.772 7.572 157.484 7.00744C158.208 6.44287 158.57 5.61086 158.57 4.51143C158.57 3.412 158.208 2.58 157.484 2.01543C156.772 1.45086 155.773 1.16857 154.485 1.16857H149.434V5.73328H148.75V6.79377V7.85431H149.313L149.434 15.4314Z" fill="white" />
+    <path d="M135.994 15.4091H144.829V16.1H135.31V0.5H144.547V1.19086H135.994V5.70577H135.31V7.832H143.641V8.52287H135.994V15.4091Z" fill="white" />
+    <path d="M116.81 16.1L112 0.5H112.724L117.353 15.5874L117.514 16.1L118.658 12.4578L118.324 11.3705L121.76 0.5H122.424L127.001 15.0382L127.329 16.1L128.474 12.4703L128.133 11.3644L131.48 0.5H132.164L128.474 12.4703L127.329 16.1H126.67L122.002 1.30229H122.163L118.658 12.4578L117.514 16.1H116.81Z" fill="white" />
+  </g>
+  <defs>
+    <clipPath id="clip0_2004_870">
+      <rect width="160" height="16" fill="white" transform="translate(0 0.5)" />
+    </clipPath>
+  </defs>
+</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+
+
+<!-- Down-up -->
+
+<div class="filter-over"></div>
+
+<div class="down-up">
+	<img src="images/up.svg" alt="">
+</div>
+
+
+<script
+	src="https://api-maps.yandex.ru/2.1/?apikey=aa738ede-ae14-4127-ad41-0327820e270b&amp;lang=ru_RU&amp;load=package.full&amp;onload=init"
+	type="text/javascript"></script>
+<script src="libraries/jquery-3.7.1.min.js"></script>
+<script src="libraries/swiper/swiper-bundle.min.js"></script>
+<script src="libraries/fancybox/jquery.fancybox.min.js"></script>
+<script src="libraries/slick/slick.min.js"></script>
+ <script src="libraries/rangeslider/ion.rangeSlider.min.js"></script>
+
+<script src="libraries/imask.js"></script>
+<script src="js/all-scripts.js"></script>
+
+<div class="modal callback" id="callback">
+  <div class="modal__close" data-fancybox-close>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18"
+        stroke="#1C1E24"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="#1C1E24"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+  <div class="modal__container">
+    <div class="modal__wrapper form">
+      <div class="modal__title">Оставить заявку</div>
+
+      <form action="#">
+        <label class="field">
+          <input type="text" placeholder="Имя" />
+        </label>
+
+        <label class="field">
+          <div class="prefix">+7</div>
+          <input type="text" placeholder="999 123-45-67" class="mask" />
+        </label>
+
+        <label class="checkbox">
+          <span class="checkbox__inner">
+            <input type="checkbox" />
+            <span></span>
+          </span>
+          <span class="checkbox__text">
+            Я даю свое согласие на обработку персональных данных, в соответствии
+            с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных
+            данных», на условиях и для целей, определенных в
+            <a href="#">Согласии на обработку персональных данных </a>
+          </span>
+        </label>
+
+        <button
+          type="submit"
+          class="feed__btn btn"
+          data-fancybox=""
+          data-src="#thanks"
+        >
+          <span>Отправить</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal callback" id="thanks">
+  <div class="modal__close" data-fancybox-close>
+   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M18 6L6 18" stroke="#1C1E24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M6 6L18 18" stroke="#1C1E24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+  </div>
+  <div class="modal__container">
+    <div class="modal__wrapper form">
+      <div class="modal__title">Заявка отправлена</div>
+
+      <div class="modal__text">
+      В ближайшее время с вами свяжется менеджер
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

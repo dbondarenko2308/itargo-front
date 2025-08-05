@@ -1,0 +1,88 @@
+.about-prin {
+ 
+  margin: 100px 0;
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+  position: relative;
+
+  &__bg {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @media only screen and (max-width: 991px) {
+      width: 519px;
+      height: 415px;
+      right: -10%;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: #1c1e24;
+    margin-bottom: 58px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    min-height: 464px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (max-width: 991px) {
+      display: block;
+      min-height: inherit;
+    }
+
+
+    &:nth-child(2) {
+      justify-content: flex-end;
+    }
+    p {
+      font-weight: 600;
+      font-size: 28px;
+      color: #1c1e24;
+      margin-bottom: 20px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+      }
+    }
+
+    span {
+      font-size: 20px;
+      line-height: 130%;
+      display: block;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

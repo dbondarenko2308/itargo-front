@@ -1,0 +1,72 @@
+.about-team {
+  background: #f6f6f6;
+  padding: 100px 0;
+  overflow: hidden;
+
+  @media only screen and (max-width: 991px) {
+    padding: 60px 0;
+  }
+
+ 
+
+  &__title {
+    font-weight: 700;
+    font-size: 52px;
+    color: #1c1e24;
+    margin-bottom: 58px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__text {
+    max-width: 1016px;
+    font-size: 20px;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+  }
+
+  &__animation {
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    animation: scroll-left-new 30s linear infinite;
+    width: max-content;
+    gap: 4px;
+
+    @media only screen and (max-width: 991px) {
+       animation: scroll-left-new 10s linear infinite;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @media only screen and (max-width: 767px) {
+      width: 200px;
+      height: 150px;
+    }
+  }
+}
+
+@keyframes scroll-left-new {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

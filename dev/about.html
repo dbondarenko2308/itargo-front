@@ -1,0 +1,21 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+<div class="about-bg">
+  
+  <div class="container">
+    @@include('components/elements/breadcrumbs/template.html',{ list: ['<a href="index.html">Главная</a>'], 'page': 'О компании', 'title': true, })
+    <div class="about__text">
+      Компания Итагро Групп с 2012 года является надёжным поставщиком оборудования, упаковочных и расходных материалов для предприятий пищевой промышленности на российском рынке.
+
+    </div>
+  </div>
+</div>
+
+@@include('components/blocks/about-mission/template.html',{})
+@@include('components/blocks/about-prin/template.html',{})
+@@include('components/blocks/product-home/template-about.html',{})
+@@include('components/blocks/about-cust/template.html',{})
+@@include('components/blocks/about-our/template.html',{})
+@@include('components/blocks/about-team/template.html',{})
+@@include('components/blocks/feedback/template.html',{})
+
+@@include('components/footer/template.html',{})

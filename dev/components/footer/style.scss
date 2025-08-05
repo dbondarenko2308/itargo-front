@@ -1,0 +1,123 @@
+@use '../../style/scss/variables.scss' as *;
+
+.footer {
+  width: 100%;
+
+  background: #3a435e;
+
+  &__inner {
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &--text {
+      font-size: 16px;
+      max-width: 348px;
+      margin-left: 20px;
+
+      @media only screen and (max-width: 991px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  &__nav {
+    li {
+      margin-bottom: 10px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+
+      a {
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    @media only screen and (max-width: 991px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+
+  &__web {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+
+  }
+
+  &__info {
+    display: block;
+
+    a {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}

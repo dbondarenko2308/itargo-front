@@ -1,0 +1,86 @@
+@use '../../../style/scss/variables.scss' as *;
+
+.dov-main {
+  overflow: hidden;
+  &__inner {
+    padding: 171px 0;
+
+    @media only screen and (max-width: 991px) {
+      padding: 91px 0;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    @media only screen and (max-width: 991px) {
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    color: $Black-900;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &__btn {
+    max-width: 218px;
+
+    &.mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+
+      &.mobile {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__animation {
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      position: relative;
+      margin-bottom: 60px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+    @media only screen and (max-width: 991px) {
+      width: max-content;
+      gap: 4px;
+      animation: scroll-left 40s linear infinite;
+      display: flex;
+      grid-gap: 0;
+
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

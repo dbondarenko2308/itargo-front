@@ -1,0 +1,54 @@
+.product-more {
+  margin-bottom: 100px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 60px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+
+  &__container {
+    @media only screen and (max-width: 991px) {
+      padding-bottom: 30px;
+
+      .swiper-pagination {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: #1c1e24;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 24px;
+    }
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+}

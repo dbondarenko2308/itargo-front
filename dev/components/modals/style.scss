@@ -1,0 +1,130 @@
+@use '../../style/scss/variables.scss' as *;
+
+.modal {
+  display: none;
+  padding: 40px 20px;
+  max-width: 440px;
+  border-radius: 16px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 15px;
+  }
+
+  &__container {
+    .feed__btn {
+      max-width: 100%;
+      text-transform: initial;
+
+      @media only screen and (max-width: 991px) {
+      }
+    }
+
+    
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 991px) {
+      top: 15px;
+    }
+
+    &:hover {
+      svg {
+        path {
+          stroke: #bc4242;
+        }
+      }
+    }
+
+    svg {
+      path {
+        transition: 300ms;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    color: $Black-900;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 24px;
+      max-width: 300px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
+
+    .field {
+      margin-bottom: 0;
+
+      input {
+        color: #333;
+
+        &:focus {
+          box-shadow: none !important;
+          outline: none !important;
+        }
+      }
+
+      &:nth-child(3) {
+        grid-column: span 2;
+
+        @media only screen and (max-width: 991px) {
+          grid-column: span 1;
+        }
+      }
+
+      &:last-child {
+        grid-column: span 2;
+
+        @media only screen and (max-width: 991px) {
+          grid-column: span 1;
+        }
+      }
+    }
+  }
+}
+
+#thanks {
+  padding: 40px 37px;
+  .modal__text {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: $Black-900;
+  }
+}
+
+.fancybox-close-small {
+  display: none;
+}

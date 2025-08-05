@@ -1,0 +1,9 @@
+
+
+.contacts {
+  margin-bottom: 100px;
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 60px;
+  }
+}

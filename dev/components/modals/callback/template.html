@@ -1,0 +1,64 @@
+<div class="modal callback" id="callback">
+  <div class="modal__close" data-fancybox-close>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18"
+        stroke="#1C1E24"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M6 6L18 18"
+        stroke="#1C1E24"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+  <div class="modal__container">
+    <div class="modal__wrapper form">
+      <div class="modal__title">Оставить заявку</div>
+
+      <form action="#">
+        <label class="field">
+          <input type="text" placeholder="Имя" />
+        </label>
+
+        <label class="field">
+          <div class="prefix">+7</div>
+          <input type="text" placeholder="999 123-45-67" class="mask" />
+        </label>
+
+        <label class="checkbox">
+          <span class="checkbox__inner">
+            <input type="checkbox" />
+            <span></span>
+          </span>
+          <span class="checkbox__text">
+            Я даю свое согласие на обработку персональных данных, в соответствии
+            с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных
+            данных», на условиях и для целей, определенных в
+            <a href="#">Согласии на обработку персональных данных </a>
+          </span>
+        </label>
+
+        <button
+          type="submit"
+          class="feed__btn btn"
+          data-fancybox=""
+          data-src="#thanks"
+        >
+          <span>Отправить</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+@@include('components/header/template.html',{"title": 'Главная'})
+@@include('components/elements/breadcrumbs/template.html',{ list: ['<a href="index.html">Главная</a>' ], 'page': 'Результат поиска по запросу «Крафт-бумага»', 'title': true, })
+
+<div class="search">
+  <div class="container">
+    <div class="search__inner">
+
+      <div class="search-empty">
+        Ничего не найдено — попробуйте изменить запрос
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('components/footer/template.html',{})
