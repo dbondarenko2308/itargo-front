@@ -90,16 +90,12 @@ $(document).ready(function() {
 	}
 
 	setTimeout(function() {
-		initAnimations()
-	}, 0)
-
-	// setTimeout(function() {
-	// 	$('.loader').fadeOut(300, function() {
-	// 		$('.wrapper').fadeIn(0, function() {
-	// 			initAnimations()
-	// 		})
-	// 	})
-	// }, 2000)
+		$('.loader').fadeOut(300, function() {
+			$('.wrapper').fadeIn(0, function() {
+				initAnimations()
+			})
+		})
+	}, 2000)
 })
 
 $('.burger').on('click', function() {
@@ -124,6 +120,9 @@ $('.header__loop svg').on('click', function() {
 	$(this).prev().toggleClass('active')
 })
 
+//------------------- map contants -----------------------------
+
+callMap('map', 16);
 const duration = 1500
 const intervalDelay = 15
 
@@ -278,7 +277,4 @@ const collectionS = new Swiper('.product-more__container', {
 	}
 })
 
-//------------------- map contants -----------------------------
-
-callMap('map', 16);
 });

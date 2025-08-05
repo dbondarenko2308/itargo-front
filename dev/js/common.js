@@ -89,14 +89,10 @@ $(document).ready(function() {
 	}
 
 	setTimeout(function() {
-		initAnimations()
-	}, 0)
-
-	// setTimeout(function() {
-	// 	$('.loader').fadeOut(300, function() {
-	// 		$('.wrapper').fadeIn(0, function() {
-	// 			initAnimations()
-	// 		})
-	// 	})
-	// }, 2000)
+		$('.loader').fadeOut(300, function() {
+			$('.wrapper').fadeIn(0, function() {
+				initAnimations()
+			})
+		})
+	}, 2000)
 })
