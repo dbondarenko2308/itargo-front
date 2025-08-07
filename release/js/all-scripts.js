@@ -101,6 +101,7 @@ $(document).ready(function() {
 $('.burger').on('click', function() {
 	$(this).toggleClass('active')
 	$('.header__content').toggleClass('active')
+	$('body').toggleClass('hidden')
 })
 
 $('.dropdown>a').on('click', function() {
