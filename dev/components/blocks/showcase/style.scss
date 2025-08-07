@@ -74,7 +74,8 @@
     position: relative;
     z-index: 11;
     margin-top: 85px;
-   
+
+    animation: opacity 3s linear;
   }
 
   &__items {
@@ -100,7 +101,23 @@
   }
 }
 
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
 
+  33% {
+    opacity: 0.4;
+  }
+
+  66% {
+    opacity: 0.7;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
 
 @keyframes scroll-left {
   0% {

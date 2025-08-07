@@ -940,6 +940,22 @@ ul {
   top: 3px;
 }
 
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.map [class*=ymaps-2-1][class*=-ground-pane] {
+  pointer-events: none;
+  -webkit-filter: grayscale(1) invert(95%);
+  filter: grayscale(1) invert(95%);
+}
+
+.map [class*=-copyrights-promo],
+.map [class*=-copyright_logo_no] {
+  display: none;
+}
+
 .menu {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -989,12 +1005,22 @@ ul {
   box-shadow: 0 32px 32px 0 rgba(68, 83, 113, 0.05), 0 0 32px 0 rgba(68, 83, 113, 0.1);
   background: #fff;
   position: absolute;
-  top: 100%;
+  top: 120%;
   width: 100%;
   border-radius: 8px;
   min-width: 200px;
   opacity: 0;
   visibility: hidden;
+}
+
+.menu__sub-list:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  top: -10px;
+  height: 40px;
 }
 
 .menu__sub-list li {
@@ -1077,22 +1103,6 @@ ul {
 }
 
 .menu__mobile--name {
-  display: none;
-}
-
-.map {
-  height: 100%;
-  width: 100%;
-}
-
-.map [class*=ymaps-2-1][class*=-ground-pane] {
-  pointer-events: none;
-  -webkit-filter: grayscale(1) invert(95%);
-  filter: grayscale(1) invert(95%);
-}
-
-.map [class*=-copyrights-promo],
-.map [class*=-copyright_logo_no] {
   display: none;
 }
 
@@ -2726,6 +2736,8 @@ ul {
   position: relative;
   z-index: 11;
   margin-top: 85px;
+  -webkit-animation: opacity 3s linear;
+  animation: opacity 3s linear;
 }
 
 .showcase__items {
@@ -2761,6 +2773,42 @@ ul {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0.4;
+  }
+
+  66% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0.4;
+  }
+
+  66% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes scroll-left {
@@ -2967,7 +3015,7 @@ ul {
   margin-left: auto;
   background: #f6f6f6;
   border-radius: 100px;
-  padding: 20px;
+  padding: 20px 39px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2982,11 +3030,21 @@ ul {
 
 .header__loop {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .header__loop svg {
   position: relative;
   z-index: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .header__field {

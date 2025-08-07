@@ -76,12 +76,22 @@
       0 0 32px 0 rgba(68, 83, 113, 0.1);
     background: #fff;
     position: absolute;
-    top: 100%;
+    top: 120%;
     width: 100%;
     border-radius: 8px;
     min-width: 200px;
    opacity: 0;
    visibility: hidden;
+
+   &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    top: -10px;
+    height: 40px;
+   }
 
     li {
       padding: 10px 20px;
