@@ -94,6 +94,7 @@
     @media only screen and (max-width: 991px) {
       display: none;
       margin-top: 0;
+      padding: 20px 15px;
 
       &.active {
         display: flex;
@@ -105,7 +106,7 @@
         border-radius: 0;
         position: fixed;
         top: 157px;
-        height: calc(100vh - 158px);
+        height: calc(100vh - 157px);
         width: 100%;
         left: 0;
         overflow: auto;

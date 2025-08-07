@@ -40,12 +40,12 @@
   &__items {
     display: flex;
     align-items: center;
-    animation: scroll-left-new 30s linear infinite;
+    animation: scroll-left-new-item 30s linear infinite;
     width: max-content;
     gap: 4px;
 
     @media only screen and (max-width: 991px) {
-       animation: scroll-left-new 10s linear infinite;
+       animation: scroll-left-new-item 10s linear infinite;
     }
   }
 
@@ -62,11 +62,11 @@
   }
 }
 
-@keyframes scroll-left-new {
+@keyframes scroll-left-new-item {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
